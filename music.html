@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Media Tags</title>
+<link rel="stylesheet" href="sample.css">
+</head>
+
+<body class="single-page">
+    <script>
+        var nowplaying = null;
+        
+        // Pause and reset playing audio before starting new selection  
+        function pauseRunningAudio(id) {        
+            if ( nowplaying != null && nowplaying != id) {
+                var x = document.getElementById(nowplaying); 
+                x.pause();
+                x.load();   
+            }
+            nowplaying = id;
+        }
+        </script>
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="images.html">Images</a>
+        <a class="active" href="music.html">Music</a>
+        <a href="videos.html">Videos</a>
+    </div> 
+    <h3>Welcome to Music Page</h3>
+    <div>
+    <audio controls onplay="pauseRunningAudio('song3')" id="song1">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/24/audio_ded5cb8aae.mp3?filename=small-dog-barking-102658.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio> 
+    <audio controls onplay="pauseRunningAudio('song3')" id="song2">
+        <source src="https://cdn.pixabay.com/download/audio/2021/12/21/audio_e3389285b0.mp3?filename=goat-amazing-sound-effects-12537.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio> 
+    <audio controls onplay="pauseRunningAudio('song3')" id="song3">
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_6b294070f5.mp3?filename=forest-with-small-river-birds-and-nature-field-recording-6735.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio> 
+    </div>
+    <div>
+    <audio controls>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/09/audio_85586100e2.mp3?filename=jungle-alien-ambient-mastered-23196.mp3" type="audio/ogg">
+        Your browser does not support the audio element
+    </audio>
+    <audio controls>
+        <source src="https://cdn.pixabay.com/download/audio/2021/09/23/audio_9a222b6fdb.mp3?filename=black-partridge-male-singing-kala-teetar-ki-awaz-8605.mp3" type="audio/ogg">
+        Your browser does not support the audio element
+    </audio>
+    <script>
+        var nowplaying = null;
+        
+        // Pause and reset playing audio before starting new selection  
+        function pauseRunningAudio(id) {        
+            if ( nowplaying != null && nowplaying != id) {
+                var x = document.getElementById(nowplaying); 
+                x.pause();
+                x.load();   
+            }
+            nowplaying = id;
+        }
+        </script>
+    </body>
+
+</html> 
